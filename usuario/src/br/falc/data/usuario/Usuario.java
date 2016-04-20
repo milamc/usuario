@@ -62,4 +62,14 @@ public class Usuario {
 		this.nome = nome;
 	}
 	
+	@Override
+	public String toString() {
+		String dados = "--Usuario--"+"\n"+
+				"Id: "+this.id+"\n"+
+				"Nome: "+this.nome+"\n"+
+				"Login: "+this.login+"\n"+
+				"Senha: "+this.senha+"\n";
+		return dados;
+	}
+	
 }
