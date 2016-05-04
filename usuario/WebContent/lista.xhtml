@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta http-equiv="Content-Type" context="text/html; charset=ISO-8859-1"/>
+	<title>Gerenciador Financeiro Pessoal</title>
+</h:head>	
+
+<h:body>
+	<h1>Gerenciador Financeiro Pessoal</h1>
+	<hr />
+	<h:outputText>Lista de Usuários</h:outputText>
+	<h:dataTable var="item" id="usuarios" value="#{usuarioBean.usuarios}" 
+				 rendered="#{!empty usuarioBean.usuarios}">
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Nome"/>
+			</f:facet>
+			<h:outputText value="#{item.nome}"/>
+		</h:column>
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Login"/>
+			</f:facet>
+			<h:outputText value="#{item.login}"/>
+		</h:column>
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Senha"/>
+			</f:facet>
+			<h:outputText value="#{item.senha}"/>
+		</h:column>		
+	</h:dataTable>
+</h:body>
+
+</html>

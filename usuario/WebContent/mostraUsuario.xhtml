@@ -12,10 +12,7 @@
 	<h1>Cadastro de Usuários - Usuário Cadastro</h1>
 	<hr />
 	Nome: <h:outputText value="#{usuarioBean.nome}" id="nome"/>
-	E-mail: <h:outputLink value="mailto:#{usuarioBean.email}">
-				<h:outputText value="#{usuarioBean.email}" id="email"/>
-			</h:outputLink>
-	
+	Login: <h:outputLink value="mailto:#{usuarioBean.login}"/>
 	Senha: <h:outputText value="#{usuarioBean.senha}" id="senha"/>
 	<hr />
 	<h:form>

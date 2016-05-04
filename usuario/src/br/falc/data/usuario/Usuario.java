@@ -30,6 +30,12 @@ public class Usuario {
 		this.nome = nome;
 	}
 
+	public Usuario(String login, String senha, String nome) {
+		this.login = login;
+		this.senha = senha;
+		this.nome = nome;
+	}
+
 	public int getId() {
 		return id;
 	}
