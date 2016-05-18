@@ -20,17 +20,20 @@ public class UsuarioBean {
 	}
 	
 	public String salvar(){
-		usuario.setNome(nome);
+		
+		UsuarioCRUD crud = new UsuarioCRUD();
+		Usuario usuario = new Usuario();
 		usuario.setLogin(login);
+		usuario.setNome(nome);
 		usuario.setSenha(senha);
-		Integer id = getUsuarioCRUD().salvar(usuario);
-		usuario.setId(id);
-				
+		crud.salvar(usuario);
 		return "sucesso";
 	}
 
 	public String listar(){
-		setUsuarios(getUsuarioCRUD().listarUsuarios());
+		UsuarioCRUD crud = new UsuarioCRUD();
+		usuarios = crud.listarUsuarios();
+		//setUsuarios(getUsuarioCRUD().listarUsuarios());
 		return "lista";
 	}
 	public Usuario getUsuario() {
